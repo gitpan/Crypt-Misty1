@@ -5,7 +5,7 @@ use warnings;
 require Exporter;
 
 our @EXPORT_OK = qw(keysize blocksize new encrypt decrypt);
-our $VERSION = '1.1.2';
+our $VERSION = '1.1.3';
 our @ISA = qw(Exporter);
 
 require XSLoader;
@@ -111,13 +111,13 @@ Decrypts 8 bytes of $data and returns the corresponding plaintext.
     # IV must be exactly 8 bytes long
     my $IV = pack "H16", 0;
 
-    my $cipher = new Crypt::CBC->new({'key' => $key,
-                                      'cipher' => 'Misty1',
-                                      'iv' => $IV,
-                                      'regenerate_key' => 1,
-                                      'padding' => 'standard',
-                                      'prepend_iv' => 0
-                                    });
+    my $cipher = Crypt::CBC->new({'key' => $key,
+                                  'cipher' => 'Misty1',
+                                  'iv' => $IV,
+                                  'regenerate_key' => 1,
+                                  'padding' => 'standard',
+                                  'prepend_iv' => 0
+                                });
 
     # when using Crypt::CBC, plaintext may be of ANY length
     my $plaintext1 = "This is a test";
