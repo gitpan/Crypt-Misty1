@@ -1,0 +1,23 @@
+#!/usr/local/bin/perl
+
+use diagnostics;
+use strict;
+use warnings;
+use Crypt::Misty1;
+
+my $key = pack "H32", "00112233445566778899aabbccddeeff";
+my $cipher = new Crypt::Misty1 $key;
+
+print "blocksize : ", $cipher->blocksize, " bytes \n";
+print "keysize   : ", $cipher->keysize, " bytes \n";
+
+my $plaintext1 = pack "H16", "0123456789abcdef";
+print "plaintext1  : ", unpack("H*", $plaintext1), "\n";
+my $ciphertext1 = $cipher->encrypt($plaintext1);
+print "ciphertext1 : ", unpack("H*", $ciphertext1), "\n";
+
+my $plaintext2 = pack "H16", "fedcba9876543210";
+print "plaintext2  : ", unpack("H*", $plaintext2), "\n";
+my $ciphertext2 = $cipher->encrypt($plaintext2);
+print "ciphertext2 : ", unpack("H*", $ciphertext2), "\n";
+

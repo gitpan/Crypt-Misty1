@@ -1,0 +1,6 @@
+Revision history for Perl extension Crypt::Misty1.
+
+1  Fri May 23 12:49:48 2003
+	- original version; created by h2xs 1.22 with options
+		--omit-autoload --compat-version=5.8.0 --omit-constant --debugging --name=Crypt::Misty1 --version=1
+
