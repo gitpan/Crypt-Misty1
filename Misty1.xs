@@ -56,7 +56,6 @@ encrypt(self, input)
         void* intext = SvPV(input, blockSize);
         if (blockSize != 8) {
             croak("Encryption error: Block size must be 8 bytes long!");
-            RETVAL = newSVpv("", 0);
         } else {
             RETVAL = newSVpv("", blockSize);
             misty1_encrypt(self->key, intext, SvPV_nolen(RETVAL));
@@ -76,7 +75,6 @@ decrypt(self, input)
         void* intext = SvPV(input, blockSize);
         if (blockSize != 8) {
             croak("Decryption error: Block size must be 8 bytes long!");
-            RETVAL = newSVpv("", 0);
         } else {
             RETVAL = newSVpv("", blockSize);
             misty1_decrypt(self->key, intext, SvPV_nolen(RETVAL));

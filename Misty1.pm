@@ -5,7 +5,7 @@ use warnings;
 require Exporter;
 
 our @EXPORT_OK = qw(keysize blocksize new encrypt decrypt);
-our $VERSION = '1.1.1';
+our $VERSION = '1.1.2';
 our @ISA = qw(Exporter);
 
 require XSLoader;
