@@ -1,6 +1,6 @@
 INSTALLATION
 
-To install Crypt::Misty1 type the following:
+To install Crypt::Misty1, type the following:
 
    perl Makefile.PL
    make

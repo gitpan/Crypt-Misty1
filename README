@@ -10,14 +10,18 @@ In January of 2000, the 3GPP consortium selected a variant of Misty1,
 dubbed as KASUMI (the Japanese word for ``misty''), as the mandatory
 cipher in W-CDMA.
 
-INSTALLATION
+BONUS
 
-To install this module type the following:
+The C file, _misty1.c, is a standalone Misty1 implementation. To
+compile it, type:
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+        gcc -Wall _misty1.c
+
+A new binary, a.out, will be created.
+
+To run the binary, type:
+
+        ./a.out
 
 COPYRIGHT AND LICENSE
 
