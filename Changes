@@ -1,11 +1,12 @@
+1.1.1    2003 June 04
+         Added one more example
+
 1.1.0    2003 June 01
          A serious bug in version 1.0.0 overwrites the plaintext block
          with its ciphertext counterpart
 
          Rewrote the whole C code from scratch
-
          Added more example codes
-
          Added more tests
 
 1.0.0    2003 May 28
